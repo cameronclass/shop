@@ -39,7 +39,7 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div className="App">
+      <div className="app">
         <Header />
         <Banner />
         <Product items={this.state.items} />
