@@ -5,6 +5,10 @@ import Footer from "./components/Footer/Footer";
 import Banner from "./components/Header/Banner";
 import Product from "./components/Product/Product";
 
+export const app = (props) => {
+  return <div></div>;
+};
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -13,7 +17,7 @@ class App extends React.Component {
         {
           id: 1,
           title: "Стул Серый",
-          img: "",
+          img: "./img/1.jpg",
           desc: "Lorem",
           category: "chairs",
           price: "49.99",
@@ -21,7 +25,7 @@ class App extends React.Component {
         {
           id: 2,
           title: "Стул Красный",
-          img: "",
+          img: "./img/2.jpg",
           desc: "Lorem",
           category: "chairs",
           price: "49.99",
@@ -29,7 +33,7 @@ class App extends React.Component {
         {
           id: 3,
           title: "Стул Синий",
-          img: "",
+          img: "./img/3.jpg",
           desc: "Lorem",
           category: "chairs",
           price: "49.99",
@@ -37,12 +41,15 @@ class App extends React.Component {
       ],
     };
   }
+
   render() {
     return (
       <div className="app">
         <Header />
         <Banner />
+
         <Product items={this.state.items} />
+
         <Footer />
       </div>
     );

@@ -18,11 +18,31 @@
 
 .header__menu {
   @apply flex
-  space-x-8;
+  space-x-8 relative;
 }
 
-.header__menu a{
-  @apply hover:text-orange-400 font-semibold ease-in duration-100;
+.header__menu li{
+  @apply flex items-center relative;
+}
+
+.header__menu a, button{
+  @apply hover:text-orange-400 font-semibold ease-in duration-100
+  flex items-center
+  ;
+}
+
+/* Cart */
+
+.cart_active{
+  @apply text-orange-300;
+}
+
+.cart_opened{
+  @apply absolute top-12 bg-yellow-50 text-slate-900
+  p-10 rounded w-72 shadow-xl shadow-gray-700
+  ;
+  transform: translateX(-50%);
+  left: 50%;
 }
 
 /* Header Banner */
@@ -34,7 +54,7 @@
   height: 500px;
 
   @apply container mx-auto bg-zinc-500 p-8
-  flex flex-col justify-center;
+  flex flex-col justify-center rounded-lg;
 }
 
 .header__banner h1 {
